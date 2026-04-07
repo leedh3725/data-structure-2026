@@ -20,4 +20,11 @@ public:
 		real = x.real + y.real;
 		imag = x.imag + y.imag;
 	}
+	void multi(Complex x, Complex y) { // (ac - bd) + (ad + bc)i = (a+bi) * (c+di)
+		double r = x.real * y.real - x.imag * y.imag;
+		double i = x.real * y.imag + x.imag * y.real;
+
+		real = r;
+		imag = i;
+	}
 };
